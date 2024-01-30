@@ -12,7 +12,11 @@ module.exports = app => {
     router.post('/contactmessage', controller.storecontactusmessage, (req, res) => { });
 
     //customer login
-    router.post('customerLogin', controller.customerLogin, (req, res) => { });
+    // router.post('customerLogin', controller.customerLogin, (req, res) => { });
+    router.post('customerLogin', (req, res) => { 
+        const { email, password, type } = req.body;
+        res.send('got data')
+    });
 
     //customer registration
     router.post('/customerregistraion', controller.customerregistration, (req, res) => { })
