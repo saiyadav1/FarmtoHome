@@ -3,13 +3,13 @@ const app = express()
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const corsOptions = {
-  origin: 'https://farmtohome.onrender.com/',
+  origin: 'http://localhost:3000/',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,  // Enable credentials (cookies, authorization headers, etc.)
   optionsSuccessStatus: 204,
 };
 require('dotenv').config();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(function (req, res, next) {
