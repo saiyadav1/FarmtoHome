@@ -3,7 +3,6 @@ module.exports = app => {
     //controllers
     const controller = require("../controller/controller");
     const jwt = require('jsonwebtoken');
-
     var router = require("express").Router();
 
     router.get('/testing',  (req, res) => { 
@@ -13,7 +12,7 @@ module.exports = app => {
     router.post('/contactmessage', controller.storecontactusmessage, (req, res) => { });
 
     //customer login
-    router.post('/customerLogin', controller.customerLogin, (req, res) => { });
+    router.post('customerLogin', controller.customerLogin, (req, res) => { });
 
     //customer registration
     router.post('/customerregistraion', controller.customerregistration, (req, res) => { })
