@@ -13,7 +13,7 @@ module.exports = app => {
 
     //customer login
     // router.post('customerLogin', controller.customerLogin, (req, res) => { });
-    router.post('customerLogin', (req, res) => { 
+    router.post('/customerLogin', (req, res) => { 
         const { email, password, type } = req.body;
         res.send('got data')
     });
