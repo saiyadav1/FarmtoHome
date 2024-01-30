@@ -2,12 +2,11 @@ const express = require('express');
 const app = express()
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const corsOptions = {
-  origin: 'https://farmtohome.onrender.com/',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,  // Enable credentials (cookies, authorization headers, etc.)
-  optionsSuccessStatus: 204,
-};
+const corsOptions ={
+  origin:'http://localhost:3000', 
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200
+}
 require('dotenv').config();
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
