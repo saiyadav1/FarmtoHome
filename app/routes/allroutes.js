@@ -6,7 +6,9 @@ module.exports = app => {
 
     var router = require("express").Router();
 
-
+    router.get('/testing',  (req, res) => { 
+        res.send('Welcome');
+    });
     //common api
     router.post('/contactmessage', controller.storecontactusmessage, (req, res) => { });
 
