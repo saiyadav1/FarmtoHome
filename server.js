@@ -3,7 +3,7 @@ const app = express()
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const corsOptions ={
-  origin:'http://localhost:3000', 
+  origin:'https://main--fanciful-begonia-f7c3e4.netlify.app', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
